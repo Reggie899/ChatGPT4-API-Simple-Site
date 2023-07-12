@@ -2,7 +2,6 @@ const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
 
-const API_KEY = 'Paste-Your-API-Key-Here';
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -17,7 +16,7 @@ form.addEventListener('submit', async (e) => {
                     'Authorization': `Bearer ${API_KEY}`,
                 },
                 body: JSON.stringify({
-                    model: 'gpt-4',
+                    model: 'gpt-3.5-turbo',
                     messages: [{ role: 'user', content: mytext }],
                     temperature: 1.0,
                     top_p: 0.7,
